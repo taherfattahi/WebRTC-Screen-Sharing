@@ -55,7 +55,7 @@ https://user-images.githubusercontent.com/14248281/170082470-c46a59c4-1c8d-4924-
 [![Product Name Screen Shot][product-screenshot]](https://vebko.org/en/Software.aspx)
 
 Web-based screen sharing service for Vebko
-This project uses WebRTC for share screen and sounds.
+This service uses WebRTC to share screens and sound.
 
 Here's why:
 * WebRTC has less delay than other alternatives.
