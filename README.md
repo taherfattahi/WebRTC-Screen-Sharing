@@ -14,6 +14,8 @@
 
   <h3 align="center">Vebko Screen Sharing Service</h3>
 
+    https://user-images.githubusercontent.com/30632761/170049301-e773a6d1-b304-4d45-a529-2f801dbe4d9e.mov
+
   <p align="center">
     A screen sharing service for Vebko company using WebRTC.
     <br />
@@ -36,6 +38,9 @@
       <ul>
         <li><a href="#installation">Installation</a></li>
       </ul>
+      <ul>
+        <li><a href="#Expose-WebRTC-Screen-Sharing-on-HTTPS">Expose WebRTC Screen Sharing on HTTPS</a></li>
+      </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -54,7 +59,7 @@ This project uses WebRTC for share screen and sounds.
 
 Here's why:
 * WebRTC has less delay than other alternatives.
-* Works on every device and browser without requirments :smile:
+* Works on all devices and browsers without any requirments :smile:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -75,10 +80,34 @@ to install front and back:
    ```sh
    npm install
    ```
+3. Serv the files (you can use http-server and include .certs)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- Expose WebRTC Screen Sharing on HTTPS -->
 
+### Expose WebRTC Screen Sharing on HTTPS
+
+1. Generate a `self-signed certificate`
+
+```bash
+# install openssl 4 ubuntu
+apt install openssl
+# install openssl 4 mac
+brew install openssl
+
+# self-signed certificate
+openssl genrsa -out key.pem
+openssl req -new -key key.pem -out csr.pem
+openssl x509 -req -days 9999 -in csr.pem -signkey key.pem -out cert.pem
+rm csr.pem
+
+# https://www.sslchecker.com/certdecoder
+```
+
+2. run `server.js` on `https`
+
+3. Change Certs inside cert directory
 
 
 <!-- CONTRIBUTING -->
@@ -114,26 +143,3 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/nimk
 [product-screenshot]: images/screenshot.png
-
-## Expose WebRTC Screen Sharing on HTTPS
-
-1. Generate a `self-signed certificate`
-
-```bash
-# install openssl 4 ubuntu
-apt install openssl
-# install openssl 4 mac
-brew install openssl
-
-# self-signed certificate
-openssl genrsa -out key.pem
-openssl req -new -key key.pem -out csr.pem
-openssl x509 -req -days 9999 -in csr.pem -signkey key.pem -out cert.pem
-rm csr.pem
-
-# https://www.sslchecker.com/certdecoder
-```
-
-2. run `server.js` on `https`
-
-3. Change Certs inside cert directory
