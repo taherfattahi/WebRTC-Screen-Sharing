@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://vebko.org/en/Default.aspx">
-    <img src="https://github.com/taherfattahi/Vebko-Chat-Service/raw/master/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Vebko Screen Sharing Service</h3>
