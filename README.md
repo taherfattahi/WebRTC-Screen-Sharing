@@ -14,7 +14,6 @@
 
   <h3 align="center">Vebko Screen Sharing Service</h3>
 
-    https://user-images.githubusercontent.com/30632761/170049301-e773a6d1-b304-4d45-a529-2f801dbe4d9e.mov
 
   <p align="center">
     A screen sharing service for Vebko company using WebRTC.
@@ -24,6 +23,7 @@
   </p>
 </div>
 
+https://user-images.githubusercontent.com/30632761/170049301-e773a6d1-b304-4d45-a529-2f801dbe4d9e.mov?width=200&height=200
 
 
 <!-- TABLE OF CONTENTS -->
